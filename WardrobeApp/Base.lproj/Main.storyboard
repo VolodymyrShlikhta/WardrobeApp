@@ -1,24 +1,318 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vWe-rf-xrP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="weathericons-regular-webfont.ttf">
+            <string>WeatherIcons-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Weather View Controller-->
+        <scene sceneID="jpc-Jn-fSc">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="vWe-rf-xrP" customClass="WeatherViewController" customModule="WardrobeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8wq-kk-Mg4"/>
+                        <viewControllerLayoutGuide type="bottom" id="m4A-p9-duY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="top" id="5wI-Yq-bOg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="lHp-jb-DiE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kY7-ZH-Xse" userLabel="Tint View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-iX-w40" userLabel="Weather Container View">
+                                        <rect key="frame" x="0.0" y="30" width="375" height="380"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Ek-LH-wI9">
+                                                <rect key="frame" x="0.5" y="0.0" width="375" height="380"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to Wear in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQk-bw-C2X">
+                                                        <rect key="frame" x="105.5" y="0.0" width="164.5" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lviv" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyd-DY-0D4">
+                                                        <rect key="frame" x="159" y="29" width="57.5" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-NO-k0V">
+                                                        <rect key="frame" x="130" y="70" width="115" height="116.5"/>
+                                                        <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="100"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMD-si-eNl">
+                                                        <rect key="frame" x="142.5" y="186.5" width="90.5" height="93.5"/>
+                                                        <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="53"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sC6-NF-9Ie">
+                                                        <rect key="frame" x="0.0" y="280" width="375" height="100"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jacket" translatesAutoresizingMaskIntoConstraints="NO" id="BdT-FG-KPO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="100"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="75" id="Pct-cF-HbO"/>
+                                                                    <constraint firstAttribute="height" constant="100" id="hfG-f1-Dgs"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jemper" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-XD-SQm">
+                                                                <rect key="frame" x="75" y="0.0" width="75" height="100"/>
+                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="75" id="qxv-4l-Bn3"/>
+                                                                    <constraint firstAttribute="height" constant="100" id="rDt-qd-cP2"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jeans" translatesAutoresizingMaskIntoConstraints="NO" id="FL6-Eg-6iy">
+                                                                <rect key="frame" x="150" y="0.0" width="75" height="100"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="3Ro-Be-gpO"/>
+                                                                    <constraint firstAttribute="width" constant="75" id="uZx-ju-X7j"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoes" translatesAutoresizingMaskIntoConstraints="NO" id="f96-fY-L4B">
+                                                                <rect key="frame" x="225" y="0.0" width="75" height="100"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="Zt5-h5-UM4"/>
+                                                                    <constraint firstAttribute="width" constant="75" id="gZd-Yb-LYw"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hat" translatesAutoresizingMaskIntoConstraints="NO" id="JOP-HC-Fll">
+                                                                <rect key="frame" x="300" y="0.0" width="75" height="100"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="iLe-Ph-eyK"/>
+                                                                    <constraint firstAttribute="width" constant="75" id="u28-EX-qkH"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" secondItem="FL6-Eg-6iy" secondAttribute="height" id="8Xz-8s-p8S"/>
+                                                            <constraint firstAttribute="height" secondItem="f96-fY-L4B" secondAttribute="height" id="9EQ-Nf-ZjQ"/>
+                                                            <constraint firstAttribute="height" secondItem="4FY-XD-SQm" secondAttribute="height" id="NsD-bp-qgq"/>
+                                                            <constraint firstAttribute="height" secondItem="BdT-FG-KPO" secondAttribute="height" id="gyc-le-riM"/>
+                                                            <constraint firstItem="JOP-HC-Fll" firstAttribute="height" secondItem="f96-fY-L4B" secondAttribute="height" id="wWa-H2-wse"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8Ek-LH-wI9" firstAttribute="centerX" secondItem="PMK-iX-w40" secondAttribute="centerX" id="1F5-XL-xNC"/>
+                                            <constraint firstItem="8Ek-LH-wI9" firstAttribute="height" secondItem="PMK-iX-w40" secondAttribute="height" id="D11-d6-7nf"/>
+                                            <constraint firstAttribute="height" constant="380" id="Yg0-aw-70e"/>
+                                            <constraint firstItem="8Ek-LH-wI9" firstAttribute="top" secondItem="PMK-iX-w40" secondAttribute="top" id="oGm-6I-pbm"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="us3-qS-g0C" userLabel="Forecast Container View">
+                                        <rect key="frame" x="0.0" y="527" width="375" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="115" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bE5-1Q-egR">
+                                                <rect key="frame" x="-25.5" y="0.0" width="426" height="80"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="142" placeholderIntrinsicHeight="115" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4zZ-ky-u3V">
+                                                        <rect key="frame" x="0.0" y="0.0" width="142" height="80"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="56" placeholderIntrinsicHeight="115" translatesAutoresizingMaskIntoConstraints="NO" id="NYl-PZ-1hz" customClass="ForecastView" customModule="WardrobeApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="71" height="80"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="80" id="Xfi-ul-99k"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="10"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dyi-Fr-i4z" customClass="ForecastView" customModule="WardrobeApp" customModuleProvider="target">
+                                                                <rect key="frame" x="86" y="0.0" width="56" height="80"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="14:00"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="8"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="NYl-PZ-1hz" firstAttribute="height" secondItem="Dyi-Fr-i4z" secondAttribute="height" id="rgt-xO-g49"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ka6-rv-8d5">
+                                                        <rect key="frame" x="157" y="0.0" width="127" height="80"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="56" placeholderIntrinsicHeight="115" translatesAutoresizingMaskIntoConstraints="NO" id="5V7-sq-Gik" customClass="ForecastView" customModule="WardrobeApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="80"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="17:00"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="12"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lmx-Zc-PZL" customClass="ForecastView" customModule="WardrobeApp" customModuleProvider="target">
+                                                                <rect key="frame" x="71" y="0.0" width="56" height="80"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="20:00"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="4"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CUe-8g-hgE">
+                                                        <rect key="frame" x="299" y="0.0" width="127" height="80"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="56" placeholderIntrinsicHeight="115" translatesAutoresizingMaskIntoConstraints="NO" id="Rks-I9-UJn" customClass="ForecastView" customModule="WardrobeApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="80"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="23:00"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="12"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-Q0-DVt" customClass="ForecastView" customModule="WardrobeApp" customModuleProvider="target">
+                                                                <rect key="frame" x="71" y="0.0" width="56" height="80"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="2:00"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="4"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Lmx-Zc-PZL" firstAttribute="height" secondItem="NYl-PZ-1hz" secondAttribute="height" id="NXF-Fb-O63"/>
+                                                    <constraint firstItem="5V7-sq-Gik" firstAttribute="height" secondItem="NYl-PZ-1hz" secondAttribute="height" id="Zy7-Pd-c0l"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact" axis="vertical"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bE5-1Q-egR" firstAttribute="centerY" secondItem="us3-qS-g0C" secondAttribute="centerY" id="HYs-zo-Kee"/>
+                                            <constraint firstItem="bE5-1Q-egR" firstAttribute="centerX" secondItem="us3-qS-g0C" secondAttribute="centerX" id="Wwa-la-u5j"/>
+                                            <constraint firstItem="bE5-1Q-egR" firstAttribute="height" secondItem="us3-qS-g0C" secondAttribute="height" id="hhF-2j-gLw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="PMK-iX-w40" firstAttribute="leading" secondItem="kY7-ZH-Xse" secondAttribute="leading" id="CgJ-eW-keL"/>
+                                    <constraint firstItem="us3-qS-g0C" firstAttribute="width" secondItem="kY7-ZH-Xse" secondAttribute="width" priority="750" id="Ih1-dO-5Tc"/>
+                                    <constraint firstItem="PMK-iX-w40" firstAttribute="top" secondItem="kY7-ZH-Xse" secondAttribute="top" priority="750" constant="30" id="M4N-YX-Tuv"/>
+                                    <constraint firstItem="PMK-iX-w40" firstAttribute="width" secondItem="kY7-ZH-Xse" secondAttribute="width" priority="750" id="P3h-sM-oce"/>
+                                    <constraint firstAttribute="bottom" secondItem="us3-qS-g0C" secondAttribute="bottom" priority="250" constant="60" id="Rbd-Q1-cFh"/>
+                                    <constraint firstItem="us3-qS-g0C" firstAttribute="centerX" secondItem="kY7-ZH-Xse" secondAttribute="centerX" priority="750" id="YiV-qx-Cu9"/>
+                                    <constraint firstItem="PMK-iX-w40" firstAttribute="centerY" secondItem="kY7-ZH-Xse" secondAttribute="centerY" id="blp-Tc-Ska"/>
+                                    <constraint firstItem="PMK-iX-w40" firstAttribute="width" secondItem="kY7-ZH-Xse" secondAttribute="width" multiplier="0.5" id="gZr-Vc-J25"/>
+                                    <constraint firstAttribute="trailing" secondItem="us3-qS-g0C" secondAttribute="trailing" id="iX0-4G-EmH"/>
+                                    <constraint firstItem="us3-qS-g0C" firstAttribute="top" secondItem="PMK-iX-w40" secondAttribute="bottom" constant="60" id="pNY-Qr-IxP"/>
+                                    <constraint firstItem="us3-qS-g0C" firstAttribute="centerY" secondItem="kY7-ZH-Xse" secondAttribute="centerY" id="vuu-a2-Bt1"/>
+                                    <constraint firstItem="PMK-iX-w40" firstAttribute="centerX" secondItem="kY7-ZH-Xse" secondAttribute="centerX" priority="750" id="yVo-Ih-5X7"/>
+                                    <constraint firstItem="us3-qS-g0C" firstAttribute="width" secondItem="kY7-ZH-Xse" secondAttribute="width" multiplier="0.5" id="zzP-xU-8L3"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CgJ-eW-keL"/>
+                                        <exclude reference="blp-Tc-Ska"/>
+                                        <exclude reference="gZr-Vc-J25"/>
+                                        <exclude reference="iX0-4G-EmH"/>
+                                        <exclude reference="pNY-Qr-IxP"/>
+                                        <exclude reference="vuu-a2-Bt1"/>
+                                        <exclude reference="zzP-xU-8L3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="CgJ-eW-keL"/>
+                                        <include reference="blp-Tc-Ska"/>
+                                        <include reference="gZr-Vc-J25"/>
+                                        <include reference="iX0-4G-EmH"/>
+                                        <include reference="vuu-a2-Bt1"/>
+                                        <include reference="zzP-xU-8L3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="pNY-Qr-IxP"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="lHp-jb-DiE" firstAttribute="centerX" secondItem="5wI-Yq-bOg" secondAttribute="centerX" id="5Gc-n0-7XL"/>
+                            <constraint firstItem="kY7-ZH-Xse" firstAttribute="width" secondItem="lHp-jb-DiE" secondAttribute="width" id="Rm7-0W-lGo"/>
+                            <constraint firstItem="kY7-ZH-Xse" firstAttribute="centerX" secondItem="lHp-jb-DiE" secondAttribute="centerX" id="S6H-az-xJT"/>
+                            <constraint firstItem="lHp-jb-DiE" firstAttribute="width" secondItem="5wI-Yq-bOg" secondAttribute="width" id="ZGv-Wn-Ifm"/>
+                            <constraint firstItem="lHp-jb-DiE" firstAttribute="height" secondItem="5wI-Yq-bOg" secondAttribute="height" id="icc-rt-w8y"/>
+                            <constraint firstItem="kY7-ZH-Xse" firstAttribute="centerY" secondItem="lHp-jb-DiE" secondAttribute="centerY" id="t5d-wV-oM8"/>
+                            <constraint firstItem="kY7-ZH-Xse" firstAttribute="height" secondItem="lHp-jb-DiE" secondAttribute="height" id="wIk-ob-3za"/>
+                            <constraint firstItem="lHp-jb-DiE" firstAttribute="centerY" secondItem="5wI-Yq-bOg" secondAttribute="centerY" id="zE0-WZ-Kc1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0bY-a3-okm"/>
                     </view>
+                    <connections>
+                        <outlet property="iconLabel" destination="MVD-NO-k0V" id="SUE-Yw-sQs"/>
+                        <outlet property="locationLabel" destination="Hyd-DY-0D4" id="R0H-Fh-Xld"/>
+                        <outlet property="temperatureLabel" destination="UMD-si-eNl" id="XEe-Jx-Fzm"/>
+                        <outletCollection property="forecastViews" destination="NYl-PZ-1hz" collectionClass="NSMutableArray" id="bLA-Hl-DFM"/>
+                        <outletCollection property="forecastViews" destination="Dyi-Fr-i4z" collectionClass="NSMutableArray" id="Vmk-PM-RPd"/>
+                        <outletCollection property="forecastViews" destination="5V7-sq-Gik" collectionClass="NSMutableArray" id="1ZZ-7l-zlD"/>
+                        <outletCollection property="forecastViews" destination="Lmx-Zc-PZL" collectionClass="NSMutableArray" id="igP-Dp-UsZ"/>
+                        <outletCollection property="forecastViews" destination="Rks-I9-UJn" collectionClass="NSMutableArray" id="jbc-qL-FFu"/>
+                        <outletCollection property="forecastViews" destination="lmb-Q0-DVt" collectionClass="NSMutableArray" id="9Bs-qb-90Q"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4w-71-ovI" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="458" y="-23"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1000" height="667"/>
+        <image name="hat" width="212" height="238"/>
+        <image name="jacket" width="1040" height="1040"/>
+        <image name="jeans" width="207" height="243"/>
+        <image name="jemper" width="1500" height="1500"/>
+        <image name="shoes" width="229" height="220"/>
+    </resources>
 </document>
