@@ -6,6 +6,6 @@ target 'WardrobeApp' do
   use_frameworks!
 
   pod 'SwiftyJSON'
-
+  pod 'Realm'
 end
 
