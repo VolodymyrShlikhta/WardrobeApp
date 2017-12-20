@@ -26,6 +26,7 @@
 		B826F4BE1FDEE1970035F1D1 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F4BD1FDEE1970035F1D1 /* ForecastViewModel.swift */; };
 		B826F4C01FDEE1B00035F1D1 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F4BF1FDEE1B00035F1D1 /* Forecast.swift */; };
 		B826F4C41FDEE45C0035F1D1 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B826F4C31FDEE45C0035F1D1 /* weathericons-regular-webfont.ttf */; };
+		B8D1510F1FEA8F15008D9A1A /* ForecastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D1510E1FEA8F15008D9A1A /* ForecastMessage.swift */; };
 		BA08989C1FCC7154000B6383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA08989B1FCC7154000B6383 /* AppDelegate.swift */; };
 		BA0898A11FCC7154000B6383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA08989F1FCC7154000B6383 /* Main.storyboard */; };
 		BA0898A31FCC7154000B6383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0898A21FCC7154000B6383 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		B826F4BD1FDEE1970035F1D1 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		B826F4BF1FDEE1B00035F1D1 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		B826F4C31FDEE45C0035F1D1 /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
+		B8D1510E1FEA8F15008D9A1A /* ForecastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastMessage.swift; sourceTree = "<group>"; };
 		BA0898981FCC7154000B6383 /* WardrobeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WardrobeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA08989B1FCC7154000B6383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA0898A01FCC7154000B6383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				B826F4A91FDEE0610035F1D1 /* Temperature.swift */,
 				B826F4AB1FDEE0790035F1D1 /* TemperatureConverter.swift */,
 				B826F4AD1FDEE0980035F1D1 /* WeatherIcons.swift */,
+				B8D1510E1FEA8F15008D9A1A /* ForecastMessage.swift */,
 				B826F4AF1FDEE0AF0035F1D1 /* WeatherBuilder.swift */,
 			);
 			name = Model;
@@ -321,6 +324,7 @@
 			files = (
 				B826F4B51FDEE0FD0035F1D1 /* WeatherServiceProtocol.swift in Sources */,
 				B826F4A81FDEE04C0035F1D1 /* Weather.swift in Sources */,
+				B8D1510F1FEA8F15008D9A1A /* ForecastMessage.swift in Sources */,
 				B826F49E1FDEDFAF0035F1D1 /* Error.swift in Sources */,
 				B826F4AA1FDEE0610035F1D1 /* Temperature.swift in Sources */,
 				B826F4C01FDEE1B00035F1D1 /* Forecast.swift in Sources */,

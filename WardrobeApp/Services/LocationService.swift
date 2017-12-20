@@ -22,7 +22,7 @@ class LocationService: NSObject {
         super.init()
         
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     func requestLocation() {
