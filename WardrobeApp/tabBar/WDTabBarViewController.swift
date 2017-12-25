@@ -14,28 +14,14 @@ class WDTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         
         self.delegate = self
+        self.tabBarController?.view.backgroundColor = UIColor.init(red: 94/255, green: 91/255, blue: 149/255, alpha: 1)
     }
     
-//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//        if selectedViewController == nil || viewController == selectedViewController {
-//            return false
-//        }
-//
-//        let fromView = selectedViewController!.view
-//        let toView = viewController.view
-//
-//        UIView.transition(from: fromView!, to: toView!, duration: 0.3, options: [.transitionCrossDissolve], completion: nil)
-//
-//        return true
-//    }
-//
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         let tabViewControllers = tabBarController.viewControllers!
         guard let toIndex = tabViewControllers.index(of: viewController) else {
             return false
         }
-        
-        // Our method
         animateToTab(toIndex: toIndex)
         
         return true

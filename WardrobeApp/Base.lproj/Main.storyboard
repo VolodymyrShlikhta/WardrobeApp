@@ -290,7 +290,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0bY-a3-okm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" springLoaded="YES" systemItem="favorites" id="qiS-6y-W1e">
+                    <tabBarItem key="tabBarItem" image="tabBar" largeContentSizeImage="tabBar" springLoaded="YES" id="qiS-6y-W1e">
                         <color key="badgeColor" red="0.87843137250000003" green="0.019607843140000001" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <connections>
@@ -351,5 +351,6 @@
         <image name="jeans" width="207" height="243"/>
         <image name="jemper" width="1500" height="1500"/>
         <image name="shoes" width="229" height="220"/>
+        <image name="tabBar" width="128" height="128"/>
     </resources>
 </document>
