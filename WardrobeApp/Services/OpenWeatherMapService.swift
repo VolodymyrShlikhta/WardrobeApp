@@ -12,7 +12,7 @@ import SwiftyJSON
 
 struct OpenWeatherMapService: WeatherServiceProtocol {
     fileprivate let urlPath = "http://api.openweathermap.org/data/2.5/forecast"
-    fileprivate func getFirstFourForecasts(_ json: JSON) -> [Forecast] {
+    fileprivate func getFirstSixForecasts(_ json: JSON) -> [Forecast] {
         var forecasts: [Forecast] = []
         
         for index in 0...5 {
@@ -90,7 +90,7 @@ struct OpenWeatherMapService: WeatherServiceProtocol {
                                         weatherBuilder.iconText = weatherIcon.iconText
                                         
                                         
-                                        weatherBuilder.forecasts = self.getFirstFourForecasts(json)
+                                        weatherBuilder.forecasts = self.getFirstSixForecasts(json)
                                         
                                         completionHandler(weatherBuilder.build(), nil)
         })
