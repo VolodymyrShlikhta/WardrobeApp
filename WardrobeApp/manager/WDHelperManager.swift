@@ -48,14 +48,10 @@ class WDHelperManager: NSObject {
             return mes.rain3.rawValue
         case 504:
             return mes.rain4.rawValue
-        case 511:
+        case 511, 531:
             return mes.rain5.rawValue
-        case 520:
+        case 520, 521, 522:
             return mes.rain6.rawValue
-        case 521, 522:
-            return mes.rain7.rawValue
-        case 531:
-            return mes.rain8.rawValue
             
 // MARK: - Snow
         case 600, 601, 602:
@@ -100,7 +96,6 @@ class WDHelperManager: NSObject {
             return mes.wind.rawValue
             
 // MARK: - Calm
-            
         case 951:
             return mes.calm.rawValue
         default:

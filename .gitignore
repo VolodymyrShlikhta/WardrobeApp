@@ -368,3 +368,50 @@ Pods/Target Support Files/Realm/Realm-dummy.m
 Pods/Target Support Files/Realm/Realm-prefix.pch
 Pods/Target Support Files/Realm/Realm.modulemap
 Pods/Target Support Files/Realm/Realm.xcconfig
+Pods/Pods.xcodeproj/xcuserdata/igorkhomenko.xcuserdatad/xcschemes/RealmSwift.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/igorkhomenko.xcuserdatad/xcschemes/SwiftSpinner.xcscheme
+Pods/RealmSwift/build.sh
+Pods/RealmSwift/LICENSE
+Pods/RealmSwift/README.md
+Pods/RealmSwift/RealmSwift/Aliases.swift
+Pods/RealmSwift/RealmSwift/Error.swift
+Pods/RealmSwift/RealmSwift/LinkingObjects.swift
+Pods/RealmSwift/RealmSwift/List.swift
+Pods/RealmSwift/RealmSwift/Migration.swift
+Pods/RealmSwift/RealmSwift/Object.swift
+Pods/RealmSwift/RealmSwift/ObjectiveCSupport.swift
+Pods/RealmSwift/RealmSwift/ObjectSchema.swift
+Pods/RealmSwift/RealmSwift/Optional.swift
+Pods/RealmSwift/RealmSwift/Property.swift
+Pods/RealmSwift/RealmSwift/Realm.swift
+Pods/RealmSwift/RealmSwift/RealmCollection.swift
+Pods/RealmSwift/RealmSwift/RealmConfiguration.swift
+Pods/RealmSwift/RealmSwift/Results.swift
+Pods/RealmSwift/RealmSwift/Schema.swift
+Pods/RealmSwift/RealmSwift/SortDescriptor.swift
+Pods/RealmSwift/RealmSwift/SwiftVersion.swift
+Pods/RealmSwift/RealmSwift/Sync.swift
+Pods/RealmSwift/RealmSwift/ThreadSafeReference.swift
+Pods/RealmSwift/RealmSwift/Util.swift
+Pods/SwiftSpinner/LICENSE
+Pods/SwiftSpinner/README.md
+Pods/SwiftSpinner/SwiftSpinner/SwiftSpinner.h
+Pods/SwiftSpinner/SwiftSpinner/SwiftSpinner.swift
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Target Support Files/Pods-WardrobeApp/Pods-WardrobeApp-acknowledgements.markdown
+Pods/Target Support Files/Pods-WardrobeApp/Pods-WardrobeApp-acknowledgements.plist
+Pods/Target Support Files/Pods-WardrobeApp/Pods-WardrobeApp-frameworks.sh
+Pods/Target Support Files/Pods-WardrobeApp/Pods-WardrobeApp.debug.xcconfig
+Pods/Target Support Files/Pods-WardrobeApp/Pods-WardrobeApp.release.xcconfig
+Pods/Target Support Files/RealmSwift/Info.plist
+Pods/Target Support Files/RealmSwift/RealmSwift-dummy.m
+Pods/Target Support Files/RealmSwift/RealmSwift-prefix.pch
+Pods/Target Support Files/RealmSwift/RealmSwift-umbrella.h
+Pods/Target Support Files/RealmSwift/RealmSwift.modulemap
+Pods/Target Support Files/RealmSwift/RealmSwift.xcconfig
+Pods/Target Support Files/SwiftSpinner/Info.plist
+Pods/Target Support Files/SwiftSpinner/SwiftSpinner-dummy.m
+Pods/Target Support Files/SwiftSpinner/SwiftSpinner-prefix.pch
+Pods/Target Support Files/SwiftSpinner/SwiftSpinner-umbrella.h
+Pods/Target Support Files/SwiftSpinner/SwiftSpinner.modulemap
+Pods/Target Support Files/SwiftSpinner/SwiftSpinner.xcconfig

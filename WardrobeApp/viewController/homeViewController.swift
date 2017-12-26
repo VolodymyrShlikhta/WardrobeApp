@@ -9,6 +9,7 @@
 import UIKit
 import CoreSpotlight
 import MobileCoreServices
+import SwiftSpinner
 
 //MARK: - UIViewController Properties
 class homeViewController: UIViewController {
@@ -27,15 +28,13 @@ class homeViewController: UIViewController {
         super.viewDidLoad()
         viewModel = WeatherViewModel()
         viewModel?.startLocationService()
-         recomendationText.text = ForecastMessage.Message.mesDefault.rawValue
+        recomendationText.text = ForecastMessage.Message.mesDefault.rawValue
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        SwiftSpinner.useContainerView(self.view)
+        SwiftSpinner.show("Preparing data...")
     }
     
     // MARK: ViewModel
@@ -84,7 +83,12 @@ class homeViewController: UIViewController {
     }
     
     func setRecomendation() {
-        recomendationText.text = WDHelperManager.sharedInstance.getHelperTextForWeatherDescription(description: (viewModel?.descriptionID.value)!)
+        if temperatureLabel.text != "" {
+            WDCalendarManager.sharedInstance.getDataFromCalendar {
+                self.recomendationText.text = WDHelperManager.sharedInstance.getHelperTextForWeatherDescription(description: (self.viewModel?.descriptionID.value)!)
+            }
+            SwiftSpinner.hide()
+        }
     }
     
 }
