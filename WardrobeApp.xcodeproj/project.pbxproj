@@ -35,6 +35,7 @@
 		BF310F9A1FE9B2CD00F9B52C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF310F991FE9B2CD00F9B52C /* ProfileViewController.swift */; };
 		BF310F9D1FE9B4A900F9B52C /* WDTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF310F9C1FE9B4A900F9B52C /* WDTabBarViewController.swift */; };
 		BF661C321FF1AC960081F345 /* WDHelperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661C311FF1AC960081F345 /* WDHelperManager.swift */; };
+		BF9AE9701FF2FE7D00E09345 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AE96F1FF2FE7D00E09345 /* CalendarModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		BF310F991FE9B2CD00F9B52C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BF310F9C1FE9B4A900F9B52C /* WDTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDTabBarViewController.swift; sourceTree = "<group>"; };
 		BF661C311FF1AC960081F345 /* WDHelperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDHelperManager.swift; sourceTree = "<group>"; };
+		BF9AE96F1FF2FE7D00E09345 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		D3D0D7CE15D0F9AECF10EA85 /* Pods-WardrobeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WardrobeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WardrobeApp/Pods-WardrobeApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				B826F4AD1FDEE0980035F1D1 /* WeatherIcons.swift */,
 				B826F4AF1FDEE0AF0035F1D1 /* WeatherBuilder.swift */,
 				B826F4A21FDEDFFA0035F1D1 /* WeatherViewModel.swift */,
+				BF9AE96F1FF2FE7D00E09345 /* CalendarModel.swift */,
 			);
 			name = Model;
 			path = "New Group";
@@ -372,6 +375,7 @@
 				B826F4AC1FDEE0790035F1D1 /* TemperatureConverter.swift in Sources */,
 				B826F4B01FDEE0AF0035F1D1 /* WeatherBuilder.swift in Sources */,
 				B826F49C1FDEDF8F0035F1D1 /* Observable.swift in Sources */,
+				BF9AE9701FF2FE7D00E09345 /* CalendarModel.swift in Sources */,
 				B826F4AE1FDEE0980035F1D1 /* WeatherIcons.swift in Sources */,
 				B826F4B31FDEE0E70035F1D1 /* LocationService.swift in Sources */,
 				B826F4A51FDEE01B0035F1D1 /* homeViewController.swift in Sources */,

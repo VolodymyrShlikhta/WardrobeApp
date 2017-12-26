@@ -36,8 +36,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-iX-w40" userLabel="Weather Container View">
                                         <rect key="frame" x="0.0" y="30" width="375" height="495"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to Wear in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQk-bw-C2X">
-                                                <rect key="frame" x="115" y="5" width="144.5" height="25.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQk-bw-C2X">
+                                                <rect key="frame" x="138.5" y="5" width="98" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -49,19 +49,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-NO-k0V">
-                                                <rect key="frame" x="159" y="73" width="55.5" height="72.5"/>
+                                                <rect key="frame" x="158" y="73" width="57.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMD-si-eNl">
-                                                <rect key="frame" x="188" y="150.5" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="188" y="136.5" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="40"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQs-5b-lvw">
-                                                <rect key="frame" x="4" y="155.5" width="367.5" height="0.0"/>
+                                                <rect key="frame" x="4" y="141.5" width="367.5" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="34"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

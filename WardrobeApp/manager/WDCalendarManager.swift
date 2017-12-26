@@ -8,6 +8,7 @@
 
 import UIKit
 import EventKit
+import RealmSwift
 
 
 class WDCalendarManager: NSObject {
@@ -18,6 +19,8 @@ class WDCalendarManager: NSObject {
     override init() {
         super.init()
     }
+    
+    var eventsData = [CalendarModel]()
     
     func getDataFromCalendar(competition: @escaping () -> Void) {
         let eventStore = EKEventStore()
@@ -54,19 +57,38 @@ class WDCalendarManager: NSObject {
             let startOfDate = myDate.startOfDay
             let endOfDate = myDate.endOfDay
             
-                let predicate = eventStore.predicateForEvents(withStart: startOfDate as Date, end: endOfDate as Date, calendars: [calendar])
+            let predicate = eventStore.predicateForEvents(withStart: startOfDate as Date, end: endOfDate as Date, calendars: [calendar])
+            let events = eventStore.events(matching: predicate)
             
-                let events = eventStore.events(matching: predicate)
+            let realm = try! Realm()
 
-                for event in events {
-                    competition()
-//                    titles.append(event.title)
-//                    startDates.append(event.startDate! as NSDate)
-//                    endDates.append(event.endDate! as NSDate)
+            for event in events {
+                let ev = CalendarModel()
+                ev.calendarName = calendar.title
+                ev.eventTitle = event.title
+                ev.eventLocation = event.location!
+                ev.eventStart = event.startDate
+                eventsData.append(ev)
+                try! realm.write {
+                    realm.add(ev)
                 }
             }
+        }
+        competition()
     }
-
+    
+    func cleanRealmFromOldData() {
+        for i in 0..<eventsData.count {
+            if eventsData[i].eventStart > Date() {
+                eventsData.remove(at: i)
+            }
+        }
+    }
+    
+    func getNearestEvent() -> CalendarModel {
+        cleanRealmFromOldData()
+        return eventsData[0]
+    }
 }
 
 extension Date {

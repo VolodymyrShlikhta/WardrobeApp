@@ -18,6 +18,20 @@ class WDHelperManager: NSObject {
         super.init()
     }
     
+    func getHelperTextForCalendarEvent() -> String {
+        let ev = WDCalendarManager.sharedInstance.getNearestEvent()
+        var text = ""
+        switch ev.calendarName {
+        case "Work":
+            text = String.init(format: "Don't forget about %@. Suit up, because Barney says so 😎", ev.eventTitle)
+        case "Birthdays":
+            text = String.init(format: "Don't forget to wish happy birthday %@ 🎁🎂", ev.eventTitle)
+        default:
+            text = String.init(format: "Greate planing for today, beter to have a good look 🤪", ev.eventTitle)
+        }
+        return text
+    }
+    
     func getHelperTextForWeatherDescription(description: Int32) -> String {
         let mes = ForecastMessage.Message.self
         

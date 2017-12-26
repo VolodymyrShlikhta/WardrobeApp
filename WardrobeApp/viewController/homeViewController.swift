@@ -28,13 +28,15 @@ class homeViewController: UIViewController {
         super.viewDidLoad()
         viewModel = WeatherViewModel()
         viewModel?.startLocationService()
+        
         recomendationText.text = ForecastMessage.Message.mesDefault.rawValue
+        SwiftSpinner.useContainerView(self.view)
+        SwiftSpinner.show("Preparing data...")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        SwiftSpinner.useContainerView(self.view)
-        SwiftSpinner.show("Preparing data...")
+         setRecomendation()
     }
     
     // MARK: ViewModel
@@ -85,7 +87,11 @@ class homeViewController: UIViewController {
     func setRecomendation() {
         if temperatureLabel.text != "" {
             WDCalendarManager.sharedInstance.getDataFromCalendar {
-                self.recomendationText.text = WDHelperManager.sharedInstance.getHelperTextForWeatherDescription(description: (self.viewModel?.descriptionID.value)!)
+                if WDCalendarManager.sharedInstance.eventsData.count > 0 {
+                   self.recomendationText.text = WDHelperManager.sharedInstance.getHelperTextForCalendarEvent()
+                } else {
+                    self.recomendationText.text = WDHelperManager.sharedInstance.getHelperTextForWeatherDescription(description: (self.viewModel?.descriptionID.value)!)
+                }
             }
             SwiftSpinner.hide()
         }
