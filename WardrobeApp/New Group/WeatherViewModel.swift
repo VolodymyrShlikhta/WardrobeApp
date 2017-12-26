@@ -20,6 +20,7 @@ class WeatherViewModel {
     let location: Observable<String>
     let iconText: Observable<String>
     let temperature: Observable<String>
+    let descriptionID: Observable<Int32>
     let forecasts: Observable<[ForecastViewModel]>
     
     // MARK: - Services
@@ -35,7 +36,7 @@ class WeatherViewModel {
         iconText = Observable(emptyString)
         temperature = Observable(emptyString)
         forecasts = Observable([])
-        
+        descriptionID = Observable(0)
         // Can put Dependency Injection here
         locationService = LocationService()
         weatherService = OpenWeatherMapService()
@@ -55,6 +56,7 @@ class WeatherViewModel {
         location.value = weather.location
         iconText.value = weather.iconText
         temperature.value = weather.temperature
+        descriptionID.value = weather.descriptionID
         
         let tempForecasts = weather.forecasts.map { forecast in
             return ForecastViewModel(forecast)
@@ -75,7 +77,7 @@ class WeatherViewModel {
         case .jsonParsingFailed:
             errorMessage.value = "We're having trouble parsing weather data."
         }
-        
+        descriptionID.value = 0
         location.value = emptyString
         iconText.value = emptyString
         temperature.value = emptyString

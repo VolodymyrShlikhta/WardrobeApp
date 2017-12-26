@@ -12,7 +12,7 @@
 		B826F49E1FDEDFAF0035F1D1 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F49D1FDEDFAF0035F1D1 /* Error.swift */; };
 		B826F4A01FDEDFC90035F1D1 /* ForecastDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F49F1FDEDFC90035F1D1 /* ForecastDateTime.swift */; };
 		B826F4A31FDEDFFA0035F1D1 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F4A21FDEDFFA0035F1D1 /* WeatherViewModel.swift */; };
-		B826F4A51FDEE01B0035F1D1 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F4A41FDEE01B0035F1D1 /* WeatherViewController.swift */; };
+		B826F4A51FDEE01B0035F1D1 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F4A41FDEE01B0035F1D1 /* homeViewController.swift */; };
 		B826F4A81FDEE04C0035F1D1 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F4A71FDEE04C0035F1D1 /* Weather.swift */; };
 		B826F4AA1FDEE0610035F1D1 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F4A91FDEE0610035F1D1 /* Temperature.swift */; };
 		B826F4AC1FDEE0790035F1D1 /* TemperatureConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826F4AB1FDEE0790035F1D1 /* TemperatureConverter.swift */; };
@@ -34,6 +34,7 @@
 		BF310F981FE9B04B00F9B52C /* WDCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF310F971FE9B04B00F9B52C /* WDCalendarManager.swift */; };
 		BF310F9A1FE9B2CD00F9B52C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF310F991FE9B2CD00F9B52C /* ProfileViewController.swift */; };
 		BF310F9D1FE9B4A900F9B52C /* WDTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF310F9C1FE9B4A900F9B52C /* WDTabBarViewController.swift */; };
+		BF661C321FF1AC960081F345 /* WDHelperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661C311FF1AC960081F345 /* WDHelperManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,7 @@
 		B826F49D1FDEDFAF0035F1D1 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		B826F49F1FDEDFC90035F1D1 /* ForecastDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDateTime.swift; sourceTree = "<group>"; };
 		B826F4A21FDEDFFA0035F1D1 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
-		B826F4A41FDEE01B0035F1D1 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		B826F4A41FDEE01B0035F1D1 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		B826F4A71FDEE04C0035F1D1 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		B826F4A91FDEE0610035F1D1 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		B826F4AB1FDEE0790035F1D1 /* TemperatureConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverter.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		BF310F971FE9B04B00F9B52C /* WDCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDCalendarManager.swift; sourceTree = "<group>"; };
 		BF310F991FE9B2CD00F9B52C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BF310F9C1FE9B4A900F9B52C /* WDTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDTabBarViewController.swift; sourceTree = "<group>"; };
+		BF661C311FF1AC960081F345 /* WDHelperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDHelperManager.swift; sourceTree = "<group>"; };
 		D3D0D7CE15D0F9AECF10EA85 /* Pods-WardrobeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WardrobeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WardrobeApp/Pods-WardrobeApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,17 +107,9 @@
 				B826F49B1FDEDF8F0035F1D1 /* Observable.swift */,
 				B826F49D1FDEDFAF0035F1D1 /* Error.swift */,
 				B826F49F1FDEDFC90035F1D1 /* ForecastDateTime.swift */,
+				B8D1510E1FEA8F15008D9A1A /* ForecastMessage.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		B826F4A61FDEE0360035F1D1 /* Weather */ = {
-			isa = PBXGroup;
-			children = (
-				B826F4A21FDEDFFA0035F1D1 /* WeatherViewModel.swift */,
-				B826F4A41FDEE01B0035F1D1 /* WeatherViewController.swift */,
-			);
-			path = Weather;
 			sourceTree = "<group>";
 		};
 		B826F4B11FDEE0C00035F1D1 /* Model */ = {
@@ -125,8 +119,8 @@
 				B826F4A91FDEE0610035F1D1 /* Temperature.swift */,
 				B826F4AB1FDEE0790035F1D1 /* TemperatureConverter.swift */,
 				B826F4AD1FDEE0980035F1D1 /* WeatherIcons.swift */,
-				B8D1510E1FEA8F15008D9A1A /* ForecastMessage.swift */,
 				B826F4AF1FDEE0AF0035F1D1 /* WeatherBuilder.swift */,
+				B826F4A21FDEDFFA0035F1D1 /* WeatherViewModel.swift */,
 			);
 			name = Model;
 			path = "New Group";
@@ -185,7 +179,6 @@
 				BA08989B1FCC7154000B6383 /* AppDelegate.swift */,
 				B826F4C21FDEE45C0035F1D1 /* Fonts */,
 				B826F4A11FDEDFE10035F1D1 /* Common */,
-				B826F4A61FDEE0360035F1D1 /* Weather */,
 				B826F4B11FDEE0C00035F1D1 /* Model */,
 				B826F4C11FDEE1BE0035F1D1 /* Forecast */,
 				BF310F961FE9B01F00F9B52C /* manager */,
@@ -203,6 +196,7 @@
 		BF310F951FE9B01100F9B52C /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				B826F4A41FDEE01B0035F1D1 /* homeViewController.swift */,
 				BF310F991FE9B2CD00F9B52C /* ProfileViewController.swift */,
 			);
 			path = viewController;
@@ -212,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				BF310F971FE9B04B00F9B52C /* WDCalendarManager.swift */,
+				BF661C311FF1AC960081F345 /* WDHelperManager.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -359,6 +354,7 @@
 			files = (
 				B826F4B51FDEE0FD0035F1D1 /* WeatherServiceProtocol.swift in Sources */,
 				B826F4A81FDEE04C0035F1D1 /* Weather.swift in Sources */,
+				BF661C321FF1AC960081F345 /* WDHelperManager.swift in Sources */,
 				B8D1510F1FEA8F15008D9A1A /* ForecastMessage.swift in Sources */,
 				B826F49E1FDEDFAF0035F1D1 /* Error.swift in Sources */,
 				B826F4AA1FDEE0610035F1D1 /* Temperature.swift in Sources */,
@@ -374,7 +370,7 @@
 				B826F49C1FDEDF8F0035F1D1 /* Observable.swift in Sources */,
 				B826F4AE1FDEE0980035F1D1 /* WeatherIcons.swift in Sources */,
 				B826F4B31FDEE0E70035F1D1 /* LocationService.swift in Sources */,
-				B826F4A51FDEE01B0035F1D1 /* WeatherViewController.swift in Sources */,
+				B826F4A51FDEE01B0035F1D1 /* homeViewController.swift in Sources */,
 				BA08989C1FCC7154000B6383 /* AppDelegate.swift in Sources */,
 				BF310F981FE9B04B00F9B52C /* WDCalendarManager.swift in Sources */,
 				B826F4A01FDEDFC90035F1D1 /* ForecastDateTime.swift in Sources */,
@@ -522,7 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.relorie.WardrobeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -538,7 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.relorie.WardrobeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

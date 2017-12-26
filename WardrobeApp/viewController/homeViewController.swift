@@ -11,13 +11,14 @@ import CoreSpotlight
 import MobileCoreServices
 
 //MARK: - UIViewController Properties
-class WeatherViewController: UIViewController {
+class homeViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var iconLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet var forecastViews: [ForecastView]!
+    @IBOutlet weak var recomendationText: UILabel!
     
     let identifier = "WeatherIdentifier"
     
@@ -26,51 +27,16 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         viewModel = WeatherViewModel()
         viewModel?.startLocationService()
-        //setAllIdentifiers()
+         recomendationText.text = ForecastMessage.Message.mesDefault.rawValue
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        locationLabel.center.x  -= view.bounds.width
-        iconLabel.center.x -= view.bounds.width
-        temperatureLabel.center.x -= view.bounds.width
-        
-        iconLabel.alpha = 0.0
-        locationLabel.alpha = 0.0
-        temperatureLabel.alpha = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        UIView.animate(withDuration: 0.5, animations: {
-            self.locationLabel.center.x += self.view.bounds.width
-        })
-        
-        UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.0, options: [], animations: {
-            self.iconLabel.center.x += self.view.bounds.width
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.4, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.0, options: [], animations: {
-            self.temperatureLabel.center.x += self.view.bounds.width
-        }, completion: nil)
-        
-        
-        UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
-            self.iconLabel.alpha = 1.0
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
-            self.locationLabel.alpha = 1.0
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.5, options: [], animations: {
-            self.temperatureLabel.alpha = 1.0
-        }, completion: nil)
-        
     }
-    
     
     // MARK: ViewModel
     var viewModel: WeatherViewModel? {
@@ -88,6 +54,9 @@ class WeatherViewController: UIViewController {
                         print("Indexing error: \(error.localizedDescription)")
                     } else {
                         print("Location item successfully indexed")
+                        DispatchQueue.main.sync {
+                            self.setRecomendation()
+                        }
                     }
                 }
             }
@@ -110,9 +79,13 @@ class WeatherViewController: UIViewController {
                     }
                 }
             }
+            
         }
     }
     
+    func setRecomendation() {
+        recomendationText.text = WDHelperManager.sharedInstance.getHelperTextForWeatherDescription(description: (viewModel?.descriptionID.value)!)
+    }
     
 }
 

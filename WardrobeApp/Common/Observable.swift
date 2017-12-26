@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class Observable<T> {
     typealias Observer = (T) -> Void
     var observer: Observer?

@@ -74,6 +74,9 @@ struct OpenWeatherMapService: WeatherServiceProtocol {
                                         guard let tempDegrees = json["list"][0]["main"]["temp"].double,
                                             let country = json["city"]["country"].string,
                                             let city = json["city"]["name"].string,
+                                            
+                                            let descriptionID = json["list"][0]["weather"][0]["id"].int32,
+                                            
                                             let weatherCondition = json["list"][0]["weather"][0]["id"].int,
                                             let iconString = json["list"][0]["weather"][0]["icon"].string else {
                                                 let error = Errors(errorCode: .jsonParsingFailed)
@@ -85,6 +88,7 @@ struct OpenWeatherMapService: WeatherServiceProtocol {
                                         let temperature = Temperature(country: country, openWeatherMapDegrees:tempDegrees)
                                         weatherBuilder.temperature = temperature.degrees
                                         weatherBuilder.location = city
+                                        weatherBuilder.descriptionID = descriptionID
                                         
                                         let weatherIcon = WeatherIcon(condition: weatherCondition, iconString: iconString)
                                         weatherBuilder.iconText = weatherIcon.iconText
