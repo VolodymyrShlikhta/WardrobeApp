@@ -7,5 +7,9 @@ target 'WardrobeApp' do
 
   pod 'SwiftyJSON'
   pod 'Realm'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
+  pod 'SVProgressHUD'
 end
 
