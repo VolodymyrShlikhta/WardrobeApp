@@ -60,18 +60,6 @@ class SignInViewController: UIViewController {
     }
     
     func setupOtherButtons() {
-        createNewAccountButton.translatesAutoresizingMaskIntoConstraints = false
-        signInButton.translatesAutoresizingMaskIntoConstraints = false
-        signInAnon.translatesAutoresizingMaskIntoConstraints = false
-        createNewAccountButton.topAnchor.constraint(equalTo: fbButton.bottomAnchor, constant: 16).isActive  = true
-        createNewAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        signInAnon.topAnchor.constraint(equalTo: createNewAccountButton.bottomAnchor, constant: 16).isActive = true
-        signInAnon.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-
-        signInButton.topAnchor.constraint(equalTo: signInAnon.bottomAnchor, constant: 16).isActive  = true
-        signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-
         signInButton.layer.cornerRadius = 0.05 * signInButton.bounds.size.width
         signInButton.layer.borderColor = UIColor.gray.cgColor
         signInButton.layer.borderWidth = 1.0
@@ -88,7 +76,6 @@ class SignInViewController: UIViewController {
         signInAnon.clipsToBounds = true
     }
     
-    @IBOutlet weak var signInPressed: UIButton!
     @IBAction func loginAnonymously(_ sender: Any) {
         Auth.auth().signInAnonymously { (user, err) in
             if let err = err {

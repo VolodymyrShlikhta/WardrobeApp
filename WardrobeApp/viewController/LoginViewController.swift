@@ -13,6 +13,7 @@ import RealmSwift
 
 class LoginViewController: UIViewController {
     // MARK: Outlets
+    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
@@ -24,6 +25,16 @@ class LoginViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
         signInButton.isEnabled = false
         signInButton.tintColor = .lightGray
+        signInButton.layer.cornerRadius = 0.05 * signInButton.bounds.size.width
+        signInButton.layer.borderColor = UIColor.gray.cgColor
+        signInButton.layer.borderWidth = 1.0
+        signInButton.clipsToBounds = true
+        
+        registerButton.tintColor = .lightGray
+        registerButton.layer.cornerRadius = 0.05 * registerButton.bounds.size.width
+        registerButton.layer.borderColor = UIColor.gray.cgColor
+        registerButton.layer.borderWidth = 1.0
+        registerButton.clipsToBounds = true
     }
     
     @IBAction func dismiss(_ sender: Any) {
