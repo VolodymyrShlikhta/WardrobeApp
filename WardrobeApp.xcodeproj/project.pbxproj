@@ -40,6 +40,7 @@
 		BF9AE97A1FF312B700E09345 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AE9791FF312B700E09345 /* TodayViewController.swift */; };
 		BF9AE97D1FF312B700E09345 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9AE97B1FF312B700E09345 /* MainInterface.storyboard */; };
 		BF9AE9811FF312B700E09345 /* wardrobe.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BF9AE9751FF312B700E09345 /* wardrobe.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BF9AE98F1FF32EE300E09345 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AE98E1FF32EE300E09345 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		BF9AE97E1FF312B700E09345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF9AE98B1FF31DB400E09345 /* wardrobe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wardrobe.entitlements; sourceTree = "<group>"; };
 		BF9AE98C1FF31F7D00E09345 /* WardrobeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WardrobeApp.entitlements; sourceTree = "<group>"; };
+		BF9AE98E1FF32EE300E09345 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D3D0D7CE15D0F9AECF10EA85 /* Pods-WardrobeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WardrobeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WardrobeApp/Pods-WardrobeApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 				B826F4AF1FDEE0AF0035F1D1 /* WeatherBuilder.swift */,
 				B826F4A21FDEDFFA0035F1D1 /* WeatherViewModel.swift */,
 				BF9AE96F1FF2FE7D00E09345 /* CalendarModel.swift */,
+				BF9AE98E1FF32EE300E09345 /* UserModel.swift */,
 			);
 			name = Model;
 			path = "New Group";
@@ -469,6 +472,7 @@
 				B826F4BE1FDEE1970035F1D1 /* ForecastViewModel.swift in Sources */,
 				B826F4B71FDEE10F0035F1D1 /* OpenWeatherMapService.swift in Sources */,
 				B826F4BA1FDEE1580035F1D1 /* ForecastView.swift in Sources */,
+				BF9AE98F1FF32EE300E09345 /* UserModel.swift in Sources */,
 				B826F4A31FDEDFFA0035F1D1 /* WeatherViewModel.swift in Sources */,
 				BF310F9D1FE9B4A900F9B52C /* WDTabBarViewController.swift in Sources */,
 				BF310F9A1FE9B2CD00F9B52C /* ProfileViewController.swift in Sources */,
