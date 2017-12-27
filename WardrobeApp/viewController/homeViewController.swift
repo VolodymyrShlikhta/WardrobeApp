@@ -93,6 +93,9 @@ class homeViewController: UIViewController {
                     self.recomendationText.text = WDHelperManager.sharedInstance.getHelperTextForWeatherDescription(description: (self.viewModel?.descriptionID.value)!)
                 }
             }
+            
+            let sharedDefaults = UserDefaults(suiteName: "group.eleks.TodayExtensionSharingDefaults")
+            sharedDefaults?.set(self.recomendationText.text, forKey: "recomendationKey")
             SwiftSpinner.hide()
         }
     }

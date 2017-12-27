@@ -36,7 +36,35 @@
 		BF310F9D1FE9B4A900F9B52C /* WDTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF310F9C1FE9B4A900F9B52C /* WDTabBarViewController.swift */; };
 		BF661C321FF1AC960081F345 /* WDHelperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661C311FF1AC960081F345 /* WDHelperManager.swift */; };
 		BF9AE9701FF2FE7D00E09345 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AE96F1FF2FE7D00E09345 /* CalendarModel.swift */; };
+		BF9AE9771FF312B700E09345 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9AE9761FF312B700E09345 /* NotificationCenter.framework */; };
+		BF9AE97A1FF312B700E09345 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AE9791FF312B700E09345 /* TodayViewController.swift */; };
+		BF9AE97D1FF312B700E09345 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9AE97B1FF312B700E09345 /* MainInterface.storyboard */; };
+		BF9AE9811FF312B700E09345 /* wardrobe.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BF9AE9751FF312B700E09345 /* wardrobe.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF9AE97F1FF312B700E09345 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA0898901FCC7154000B6383 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF9AE9741FF312B700E09345;
+			remoteInfo = wardrobe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF9AE9851FF312B700E09345 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BF9AE9811FF312B700E09345 /* wardrobe.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09BDD77CDD126082D5A81733 /* Pods_WardrobeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WardrobeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +99,13 @@
 		BF310F9C1FE9B4A900F9B52C /* WDTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDTabBarViewController.swift; sourceTree = "<group>"; };
 		BF661C311FF1AC960081F345 /* WDHelperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDHelperManager.swift; sourceTree = "<group>"; };
 		BF9AE96F1FF2FE7D00E09345 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		BF9AE9751FF312B700E09345 /* wardrobe.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = wardrobe.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF9AE9761FF312B700E09345 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		BF9AE9791FF312B700E09345 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BF9AE97C1FF312B700E09345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		BF9AE97E1FF312B700E09345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF9AE98B1FF31DB400E09345 /* wardrobe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wardrobe.entitlements; sourceTree = "<group>"; };
+		BF9AE98C1FF31F7D00E09345 /* WardrobeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WardrobeApp.entitlements; sourceTree = "<group>"; };
 		D3D0D7CE15D0F9AECF10EA85 /* Pods-WardrobeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WardrobeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WardrobeApp/Pods-WardrobeApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +115,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				62A76165CCDD3BB08D70B8FC /* Pods_WardrobeApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF9AE9721FF312B700E09345 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9AE9771FF312B700E09345 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				09BDD77CDD126082D5A81733 /* Pods_WardrobeApp.framework */,
+				BF9AE9761FF312B700E09345 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				BA08989A1FCC7154000B6383 /* WardrobeApp */,
+				BF9AE9781FF312B700E09345 /* wardrobe */,
 				BA0898991FCC7154000B6383 /* Products */,
 				1CFE53E14BECD628654445AA /* Pods */,
 				1E4BBF6E8D922513A419D0EE /* Frameworks */,
@@ -172,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				BA0898981FCC7154000B6383 /* WardrobeApp.app */,
+				BF9AE9751FF312B700E09345 /* wardrobe.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +225,7 @@
 		BA08989A1FCC7154000B6383 /* WardrobeApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF9AE98C1FF31F7D00E09345 /* WardrobeApp.entitlements */,
 				BA08989B1FCC7154000B6383 /* AppDelegate.swift */,
 				B826F4C21FDEE45C0035F1D1 /* Fonts */,
 				B826F4A11FDEDFE10035F1D1 /* Common */,
@@ -222,6 +269,17 @@
 			path = tabBar;
 			sourceTree = "<group>";
 		};
+		BF9AE9781FF312B700E09345 /* wardrobe */ = {
+			isa = PBXGroup;
+			children = (
+				BF9AE98B1FF31DB400E09345 /* wardrobe.entitlements */,
+				BF9AE9791FF312B700E09345 /* TodayViewController.swift */,
+				BF9AE97B1FF312B700E09345 /* MainInterface.storyboard */,
+				BF9AE97E1FF312B700E09345 /* Info.plist */,
+			);
+			path = wardrobe;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,15 +293,34 @@
 				BA0898961FCC7154000B6383 /* Resources */,
 				7EFE4E54BABE498A55FC80A6 /* [CP] Embed Pods Frameworks */,
 				4C4D824993295D7C7F936861 /* [CP] Copy Pods Resources */,
+				BF9AE9851FF312B700E09345 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BF9AE9801FF312B700E09345 /* PBXTargetDependency */,
 			);
 			name = WardrobeApp;
 			productName = WardrobeApp;
 			productReference = BA0898981FCC7154000B6383 /* WardrobeApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BF9AE9741FF312B700E09345 /* wardrobe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF9AE9821FF312B700E09345 /* Build configuration list for PBXNativeTarget "wardrobe" */;
+			buildPhases = (
+				BF9AE9711FF312B700E09345 /* Sources */,
+				BF9AE9721FF312B700E09345 /* Frameworks */,
+				BF9AE9731FF312B700E09345 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wardrobe;
+			productName = wardrobe;
+			productReference = BF9AE9751FF312B700E09345 /* wardrobe.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -251,13 +328,27 @@
 		BA0898901FCC7154000B6383 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Relorie;
 				TargetAttributes = {
 					BA0898971FCC7154000B6383 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					BF9AE9741FF312B700E09345 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -275,6 +366,7 @@
 			projectRoot = "";
 			targets = (
 				BA0898971FCC7154000B6383 /* WardrobeApp */,
+				BF9AE9741FF312B700E09345 /* wardrobe */,
 			);
 		};
 /* End PBXProject section */
@@ -289,6 +381,14 @@
 				BA0898A11FCC7154000B6383 /* Main.storyboard in Resources */,
 				B826F4C41FDEE45C0035F1D1 /* weathericons-regular-webfont.ttf in Resources */,
 				B826F4BC1FDEE1660035F1D1 /* ForecastView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF9AE9731FF312B700E09345 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9AE97D1FF312B700E09345 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +485,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF9AE9711FF312B700E09345 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9AE97A1FF312B700E09345 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF9AE9801FF312B700E09345 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF9AE9741FF312B700E09345 /* wardrobe */;
+			targetProxy = BF9AE97F1FF312B700E09345 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BA08989F1FCC7154000B6383 /* Main.storyboard */ = {
@@ -402,6 +518,14 @@
 				BA0898A51FCC7154000B6383 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BF9AE97B1FF312B700E09345 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF9AE97C1FF312B700E09345 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -518,12 +642,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D3D0D7CE15D0F9AECF10EA85 /* Pods-WardrobeApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WardrobeApp/WardrobeApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JZ5ZGJWC8;
 				INFOPLIST_FILE = WardrobeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.relorie.WardrobeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eleks.WardrobeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -534,15 +660,51 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B786F1580E32F59802B8C231 /* Pods-WardrobeApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WardrobeApp/WardrobeApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JZ5ZGJWC8;
 				INFOPLIST_FILE = WardrobeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.relorie.WardrobeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eleks.WardrobeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BF9AE9831FF312B700E09345 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = wardrobe/wardrobe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2JZ5ZGJWC8;
+				INFOPLIST_FILE = wardrobe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eleks.WardrobeApp.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF9AE9841FF312B700E09345 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = wardrobe/wardrobe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2JZ5ZGJWC8;
+				INFOPLIST_FILE = wardrobe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eleks.WardrobeApp.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -563,6 +725,15 @@
 			buildConfigurations = (
 				BA0898AB1FCC7154000B6383 /* Debug */,
 				BA0898AC1FCC7154000B6383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF9AE9821FF312B700E09345 /* Build configuration list for PBXNativeTarget "wardrobe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF9AE9831FF312B700E09345 /* Debug */,
+				BF9AE9841FF312B700E09345 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

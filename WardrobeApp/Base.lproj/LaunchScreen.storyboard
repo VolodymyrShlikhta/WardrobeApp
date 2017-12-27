@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-beanie-100-3" translatesAutoresizingMaskIntoConstraints="NO" id="mYX-OU-91c">
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-beanie-100-3" translatesAutoresizingMaskIntoConstraints="NO" id="mYX-OU-91c">
                                 <rect key="frame" x="220" y="249" width="28" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -57,6 +57,6 @@
     <resources>
         <image name="background" width="1000" height="667"/>
         <image name="icons8-beanie-100-3" width="100" height="100"/>
-        <image name="icons8-umbrella-100-3" width="100" height="100"/>
+        <image name="icons8-umbrella-100-3" width="50" height="50"/>
     </resources>
 </document>

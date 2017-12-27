@@ -50,7 +50,6 @@ class WDCalendarManager: NSObject {
         let calendars = eventStore.calendars(for: .event)
         
         for calendar in calendars {
-            print(calendar.title)
             let timeZoonDiferents = (NSTimeZone.local.secondsFromGMT() / 3600) * 60 * 60;
             var myDate = Date()
             myDate = myDate.addingTimeInterval(TimeInterval(timeZoonDiferents))
@@ -78,9 +77,13 @@ class WDCalendarManager: NSObject {
     }
     
     func cleanRealmFromOldData() {
+        let timeZoonDiferents = (NSTimeZone.local.secondsFromGMT() / 3600) * 60 * 60;
+        var curentDate = Date()
+        curentDate = curentDate.addingTimeInterval(TimeInterval(timeZoonDiferents))
         for i in 0..<eventsData.count {
-            if eventsData[i].eventStart > Date() {
+            if eventsData[i].eventStart < curentDate {
                 eventsData.remove(at: i)
+                break
             }
         }
     }
