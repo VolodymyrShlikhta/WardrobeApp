@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-     
+        let realm = try! Realm()
+        guard let user = realm.objects(UserModel.self).first else {return}
+        let img = UIImage.init(data: user.userAvatarData)
+        
     }
 }

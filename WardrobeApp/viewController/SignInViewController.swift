@@ -10,8 +10,8 @@ import UIKit
 import FBSDKLoginKit
 import GoogleSignIn
 import FirebaseAuth
-import SVProgressHUD
-
+import SwiftSpinner
+import RealmSwift
 
 class SignInViewController: UIViewController {
     
@@ -23,11 +23,18 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         setupFacebookButton()
         setupGoogleButton()
         setupOtherButtons()
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if true == UserDefaults.standard.bool(forKey: "isLogin") {
+            self.performSegue(withIdentifier: "dashboardSegue", sender: self)
+        }
+    }
+    
     func setupFacebookButton() {
         fbButton.center = view.center
         fbButton.delegate = self
@@ -79,7 +86,6 @@ class SignInViewController: UIViewController {
         signInAnon.layer.borderColor = UIColor.gray.cgColor
         signInAnon.layer.borderWidth = 1.0
         signInAnon.clipsToBounds = true
-        
     }
     
     @IBOutlet weak var signInPressed: UIButton!
@@ -108,20 +114,33 @@ extension SignInViewController: FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if result.isCancelled == true { return }
         if error != nil {
-            SVProgressHUD.showError(withStatus: error.localizedDescription)
+             SwiftSpinner.show(duration: 3.0, title:  error.localizedDescription, animated: true)
             return
         }
-        SVProgressHUD.show(withStatus: "Logging in...")
+        SwiftSpinner.show("Logging in...")
         let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         Auth.auth().signIn(with: credential) { (user, error) in
             if let err = error {
-                SVProgressHUD.showError(withStatus: "Failed to create a Firebase User with Facebook account: \(err.localizedDescription)")
+               SwiftSpinner.show(duration: 3.0, title: "Failed to create a Firebase User with FaceBook account: \(err.localizedDescription)", animated: true)
                 return
             }
             
             guard let uid = user?.uid else { return }
             print("Successfully logged into Firebase with Facebook", uid)
-            SVProgressHUD.showSuccess(withStatus: "Welcome!")
+            SwiftSpinner.show(duration: 3.0, title: "Welcome!", animated: true)
+            let realm = try! Realm()
+            let profileData = UserModel()
+            profileData.userFirstName = (user?.displayName)!
+            profileData.userLastName = ""
+            profileData.userNickName = ""
+            profileData.userGendr = ""
+            profileData.userEmail = (user?.email)!
+            let data = try? Data(contentsOf: (user?.photoURL)!)
+            profileData.userAvatarData = data!
+            try! realm.write {
+                realm.add(profileData)
+            }
+            UserDefaults.standard.set(true, forKey: "isLogin")
             self.performSegue(withIdentifier: "dashboardSegue", sender: self)
         }
     }
@@ -132,22 +151,35 @@ extension SignInViewController: FBSDKLoginButtonDelegate {
 
 extension SignInViewController: GIDSignInDelegate, GIDSignInUIDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser?, withError error: Error!) {
-        print("Successfully logged into Google", user )
         if user == nil { return }
-        SVProgressHUD.show(withStatus: "Logging in...")
+        SwiftSpinner.show("Logging in...")
         guard let idToken = user?.authentication.idToken else { return }
         guard let accessToken = user?.authentication.accessToken else { return }
         let credentials = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
         
         Auth.auth().signIn(with: credentials, completion: { (user, error) in
+            SwiftSpinner.hide()
             if let err = error {
-                SVProgressHUD.showError(withStatus: "Failed to create a Firebase User with Google account: \(err.localizedDescription)")
+                SwiftSpinner.show(duration: 3.0, title: "Failed to create a Firebase User with Google account: \(err.localizedDescription)", animated: true)
+
                 return
             }
-            
             guard let uid = user?.uid else { return }
             print("Successfully logged into Firebase with Google", uid)
-            SVProgressHUD.showSuccess(withStatus: "Welcome!")
+            SwiftSpinner.show(duration: 3.0, title: "Welcome!", animated: true)
+            let realm = try! Realm()
+            let profileData = UserModel()
+            profileData.userFirstName = (user?.displayName)!
+            profileData.userLastName = ""
+            profileData.userNickName = ""
+            profileData.userGendr = ""
+            profileData.userEmail = (user?.email)!
+            let data = try? Data(contentsOf: (user?.photoURL)!)
+            profileData.userAvatarData = data!
+            try! realm.write {
+                realm.add(profileData)
+            }
+            UserDefaults.standard.set(true, forKey: "isLogin")
             self.performSegue(withIdentifier: "dashboardSegue", sender: self)
         })
     }
