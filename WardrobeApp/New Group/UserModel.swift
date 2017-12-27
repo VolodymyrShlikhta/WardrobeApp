@@ -14,5 +14,6 @@ class UserModel: Object {
     @objc dynamic var userLastName = ""
     @objc dynamic var userNickName = ""
     @objc dynamic var userGendr = ""
+    @objc dynamic var userEmail = ""
     @objc dynamic var userAvatarData = Data()
 }
