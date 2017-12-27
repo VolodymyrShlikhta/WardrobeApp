@@ -11,6 +11,5 @@ target 'WardrobeApp' do
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
-  pod 'SVProgressHUD'
 end
 

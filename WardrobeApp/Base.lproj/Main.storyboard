@@ -265,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4w-71-ovI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581.60000000000002" y="-681.40929535232385"/>
+            <point key="canvasLocation" x="622" y="-166"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="erm-hM-RKI">
@@ -342,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VQ-Fg-b5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581.60000000000002" y="287.40629685157421"/>
+            <point key="canvasLocation" x="623" y="720"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="N2d-bl-Eus">
@@ -364,20 +364,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pv-XN-CMm">
-                                        <rect key="frame" x="20" y="598" width="274" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Sign In using existring account">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="QyF-v3-ds7" kind="presentation" id="Obr-qK-ZVF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgV-Rj-UbO">
-                                        <rect key="frame" x="129" y="496" width="140" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgV-Rj-UbO">
+                                        <rect key="frame" x="50" y="498" width="275" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="999" constant="33" id="LmC-j6-5Yc"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Create account">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -386,9 +377,11 @@
                                             <segue destination="WcB-qK-tuf" kind="presentation" id="5dz-0I-TG0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAT-BW-3FE">
-                                        <rect key="frame" x="78" y="537" width="138" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAT-BW-3FE">
+                                        <rect key="frame" x="50" y="546" width="275" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="999" constant="33" id="NXg-6S-Fga"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Anonymously">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -397,10 +390,33 @@
                                             <action selector="loginAnonymously:" destination="TdG-fO-toR" eventType="touchUpInside" id="hfi-8e-5en"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pv-XN-CMm">
+                                        <rect key="frame" x="50" y="594" width="275" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="999" constant="33" id="D3E-82-TNt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Sign In using existring account">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="QyF-v3-ds7" kind="presentation" id="Obr-qK-ZVF"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="2pv-XN-CMm" firstAttribute="top" secondItem="mAT-BW-3FE" secondAttribute="bottom" constant="15" id="3M6-xc-nf7"/>
+                                    <constraint firstAttribute="trailing" secondItem="bgV-Rj-UbO" secondAttribute="trailing" constant="50" id="7DS-es-3fG"/>
+                                    <constraint firstItem="mAT-BW-3FE" firstAttribute="top" secondItem="bgV-Rj-UbO" secondAttribute="bottom" constant="15" id="7gf-Sp-WyM"/>
+                                    <constraint firstItem="2pv-XN-CMm" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Tfw-j0-EkN" secondAttribute="leading" constant="50" id="CcV-zA-EgE"/>
+                                    <constraint firstAttribute="bottom" secondItem="2pv-XN-CMm" secondAttribute="bottom" constant="40" id="RYs-lL-FKV"/>
+                                    <constraint firstAttribute="trailing" secondItem="mAT-BW-3FE" secondAttribute="trailing" constant="50" id="Ykq-Ob-xQh"/>
+                                    <constraint firstItem="bgV-Rj-UbO" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Tfw-j0-EkN" secondAttribute="leading" constant="50" id="baJ-Cj-dNI"/>
                                     <constraint firstItem="ZNd-an-enY" firstAttribute="centerX" secondItem="Tfw-j0-EkN" secondAttribute="centerX" id="gCE-hU-a5q"/>
+                                    <constraint firstItem="mAT-BW-3FE" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Tfw-j0-EkN" secondAttribute="leading" constant="50" id="hgF-x9-fZf"/>
+                                    <constraint firstAttribute="trailing" secondItem="2pv-XN-CMm" secondAttribute="trailing" constant="50" id="pPN-n4-UC6"/>
+                                    <constraint firstItem="mAT-BW-3FE" firstAttribute="centerX" secondItem="Tfw-j0-EkN" secondAttribute="centerX" id="rsc-sY-rHa"/>
                                     <constraint firstItem="ZNd-an-enY" firstAttribute="top" secondItem="Tfw-j0-EkN" secondAttribute="top" constant="32" id="x1i-OD-u1T"/>
                                 </constraints>
                             </view>
@@ -428,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mwh-3g-txy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1220" y="-44.527736131934034"/>
+            <point key="canvasLocation" x="-1874" y="-44"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="gD4-h7-R4e">
@@ -536,7 +552,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9d-qy-5DR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1220" y="730.88455772113946"/>
+            <point key="canvasLocation" x="-1874" y="738"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="vTl-HI-Gpb">
@@ -555,7 +571,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zo-VJ-b12" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372" y="-43"/>
+            <point key="canvasLocation" x="-546" y="287"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="3Zg-Xt-ecK">

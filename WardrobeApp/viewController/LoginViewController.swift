@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SwiftSpinner
 import FirebaseAuth
+import RealmSwift
 
 class LoginViewController: UIViewController {
     // MARK: Outlets
@@ -31,14 +32,28 @@ class LoginViewController: UIViewController {
     
     @IBAction func performSignIn(_ sender: Any) {
         view.endEditing(true)
-        SVProgressHUD.show(withStatus: "Logging in...")
-        
+        SwiftSpinner.show("Logging in...")
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+            SwiftSpinner.hide()
             if let error = error {
-                SVProgressHUD.showError(withStatus: error.localizedDescription)
+                SwiftSpinner.show(duration: 3.0, title: error.localizedDescription, animated: true)
                 return
             }
-            SVProgressHUD.showSuccess(withStatus: "Welcome!")
+            SwiftSpinner.show(duration: 3.0, title: "Welcome!", animated: true)
+            let realm = try! Realm()
+            
+            let profileData = UserModel()
+            profileData.userFirstName = (user?.displayName)!
+            profileData.userLastName = ""
+            profileData.userNickName = ""
+            profileData.userGendr = ""
+            profileData.userEmail = (user?.email)!
+            let data = try? Data(contentsOf: (user?.photoURL)!)
+            profileData.userAvatarData = data!
+            try! realm.write {
+                realm.add(profileData)
+            }
+            UserDefaults.standard.set(true, forKey: "isLogin")
             self.performSegue(withIdentifier: "dashboardSegue", sender: self)
         })
 

@@ -8,7 +8,8 @@
 
 import UIKit
 import FirebaseAuth
-import SVProgressHUD
+import SwiftSpinner
+import RealmSwift
 
 class SignUpViewController: UIViewController {
     // MARK: Outlets
@@ -30,6 +31,7 @@ class SignUpViewController: UIViewController {
         configureImageView()
         configureSignUpButton()
     }
+
     
     func configureSignUpButton() {
         signUpButton.layer.cornerRadius = 0.2 * signUpButton.bounds.size.width
@@ -74,23 +76,31 @@ class SignUpViewController: UIViewController {
     
     @IBAction func performSignUp(_ sender: UIButton) {
         view.endEditing(true)
-        SVProgressHUD.show(withStatus: "Waiting...")
+        SwiftSpinner.show("Waiting...")
         if let profileImage = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImage, 0.1) {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if error != nil{
-                    SVProgressHUD.showError(withStatus: "\(error?.localizedDescription ?? "" )")
+                    SwiftSpinner.show(duration: 3.0, title: "\(error?.localizedDescription ?? "" )", animated: true)
                     return
                 }
-                // save image to realm on response segue to dashboard
-                
-                
+                let realm = try! Realm()
+                let profileData = UserModel()
+                profileData.userFirstName = (user?.displayName)!
+                profileData.userLastName = ""
+                profileData.userNickName = ""
+                profileData.userGendr = ""
+                profileData.userEmail = (user?.email)!
+                profileData.userAvatarData = imageData
+                try! realm.write {
+                    realm.add(profileData)
+                }
+                UserDefaults.standard.set(true, forKey: "isLogin")
+                self.performSegue(withIdentifier: "dashboardSegue", sender: self)
             }
         }else {
-            SVProgressHUD.showError(withStatus: "Profile must have a picture.")
+            SwiftSpinner.show(duration: 3.0, title:"Profile must have a picture.", animated: true)
         }
     }
-    
-    
     
     @IBAction func haveAccountPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
