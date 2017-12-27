@@ -52,19 +52,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-NO-k0V">
-                                                <rect key="frame" x="158" y="73" width="57.5" height="58.5"/>
+                                                <rect key="frame" x="159" y="73" width="55.5" height="72.5"/>
                                                 <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMD-si-eNl">
-                                                <rect key="frame" x="188" y="136.5" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="188" y="150.5" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="40"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQs-5b-lvw">
-                                                <rect key="frame" x="4" y="141.5" width="367.5" height="0.0"/>
+                                                <rect key="frame" x="4" y="155.5" width="367.5" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="34"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -249,9 +249,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0bY-a3-okm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" largeContentSizeImage="tabBar" springLoaded="YES" systemItem="featured" id="qiS-6y-W1e">
-                        <color key="badgeColor" red="0.87843137250000003" green="0.019607843140000001" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" image="Home" largeContentSizeImage="tabBar" selectedImage="Home_Selected" springLoaded="YES" id="qiS-6y-W1e"/>
                     <connections>
                         <outlet property="iconLabel" destination="MVD-NO-k0V" id="SUE-Yw-sQs"/>
                         <outlet property="locationLabel" destination="Hyd-DY-0D4" id="R0H-Fh-Xld"/>
@@ -276,10 +274,71 @@
                     <view key="view" contentMode="scaleToFill" id="gIT-oW-mCd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vyn-QM-jd9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slG-pU-TQp" userLabel="Tint View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-3v-Ze7">
+                                <rect key="frame" x="123" y="52" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="hcY-Xo-cQJ"/>
+                                    <constraint firstAttribute="width" constant="128" id="xV6-RU-XZQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoK-kD-FLF">
+                                <rect key="frame" x="8" y="572" width="359" height="30"/>
+                                <state key="normal" title="Create account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anonymous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txW-LH-5pa">
+                                <rect key="frame" x="125.5" y="228" width="124" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender: ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUy-O2-W3g">
+                                <rect key="frame" x="137" y="305" width="101" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.019607843140000001" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bRw-3v-Ze7" firstAttribute="centerX" secondItem="gIT-oW-mCd" secondAttribute="centerX" id="1RI-Zj-vMk"/>
+                            <constraint firstItem="vyn-QM-jd9" firstAttribute="leading" secondItem="XHe-76-CMh" secondAttribute="leading" id="3Tt-B2-4Ry"/>
+                            <constraint firstAttribute="bottom" secondItem="vyn-QM-jd9" secondAttribute="bottom" id="78g-Ra-vBF"/>
+                            <constraint firstItem="vyn-QM-jd9" firstAttribute="top" secondItem="gIT-oW-mCd" secondAttribute="top" id="JCC-2r-dE0"/>
+                            <constraint firstItem="txW-LH-5pa" firstAttribute="top" secondItem="bRw-3v-Ze7" secondAttribute="bottom" constant="48" id="K5W-T9-naO"/>
+                            <constraint firstItem="bRw-3v-Ze7" firstAttribute="top" secondItem="XHe-76-CMh" secondAttribute="top" constant="32" id="K5X-rk-P5C"/>
+                            <constraint firstItem="slG-pU-TQp" firstAttribute="top" secondItem="gIT-oW-mCd" secondAttribute="top" id="MER-e7-Gdz"/>
+                            <constraint firstItem="vyn-QM-jd9" firstAttribute="trailing" secondItem="XHe-76-CMh" secondAttribute="trailing" id="RsQ-IL-Djp"/>
+                            <constraint firstItem="txW-LH-5pa" firstAttribute="centerX" secondItem="gIT-oW-mCd" secondAttribute="centerX" id="U89-MD-dHd"/>
+                            <constraint firstItem="MoK-kD-FLF" firstAttribute="centerX" secondItem="gIT-oW-mCd" secondAttribute="centerX" id="UlM-Ul-8Vu"/>
+                            <constraint firstItem="MoK-kD-FLF" firstAttribute="leading" secondItem="XHe-76-CMh" secondAttribute="leading" constant="8" id="VC3-rM-57C"/>
+                            <constraint firstItem="XHe-76-CMh" firstAttribute="bottom" secondItem="MoK-kD-FLF" secondAttribute="bottom" constant="16" id="Wdn-PX-32K"/>
+                            <constraint firstItem="XHe-76-CMh" firstAttribute="trailing" secondItem="MoK-kD-FLF" secondAttribute="trailing" constant="8" id="ZeK-Q2-1Xt"/>
+                            <constraint firstItem="slG-pU-TQp" firstAttribute="trailing" secondItem="XHe-76-CMh" secondAttribute="trailing" id="gN6-1f-Ld6"/>
+                            <constraint firstItem="DUy-O2-W3g" firstAttribute="centerX" secondItem="gIT-oW-mCd" secondAttribute="centerX" id="icF-BX-e57"/>
+                            <constraint firstItem="DUy-O2-W3g" firstAttribute="top" secondItem="txW-LH-5pa" secondAttribute="bottom" constant="48" id="lNF-k1-kDj"/>
+                            <constraint firstItem="slG-pU-TQp" firstAttribute="leading" secondItem="XHe-76-CMh" secondAttribute="leading" id="vBF-NZ-V6c"/>
+                            <constraint firstAttribute="bottom" secondItem="slG-pU-TQp" secondAttribute="bottom" id="wb1-9t-mHA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XHe-76-CMh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" springLoaded="YES" systemItem="more" id="ZmP-6P-Id2"/>
+                    <tabBarItem key="tabBarItem" image="Profile" selectedImage="Profile_Selected" springLoaded="YES" id="ZmP-6P-Id2"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="txW-LH-5pa" id="oHW-WN-VaR"/>
+                        <outlet property="genderLabel" destination="DUy-O2-W3g" id="bvI-qf-VeQ"/>
+                        <outlet property="profileImageView" destination="bRw-3v-Ze7" id="08E-bo-fc6"/>
+                        <outlet property="signOutButton" destination="MoK-kD-FLF" id="ZhA-Bq-OkK"/>
+                        <segue destination="TdG-fO-toR" kind="show" identifier="signInProfileSegue" id="YaM-4J-KJw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VQ-Fg-b5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,7 +352,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bmq-7t-ldr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bmq-7t-ldr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfw-j0-EkN" userLabel="Tint View">
@@ -379,7 +438,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="cr3-SM-UXV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="cr3-SM-UXV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -483,10 +542,11 @@
         <scene sceneID="vTl-HI-Gpb">
             <objects>
                 <tabBarController id="tl4-aw-Ejr" customClass="WDTabBarViewController" customModule="WardrobeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dIA-QL-dEh">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" itemPositioning="fill" id="dIA-QL-dEh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="vWe-rf-xrP" kind="relationship" relationship="viewControllers" id="EfM-OH-NeV"/>
@@ -505,7 +565,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7Xt-dF-YQR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7Xt-dF-YQR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -595,11 +655,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Home" width="21" height="23"/>
+        <image name="Home_Selected" width="21" height="23"/>
+        <image name="Profile" width="20" height="21"/>
+        <image name="Profile_Selected" width="20" height="21"/>
         <image name="background" width="1000" height="667"/>
         <image name="profile_placeholder" width="360" height="360"/>
         <image name="tabBar" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zLJ-v2-i8m"/>
+        <segue reference="AbG-6x-lcM"/>
     </inferredMetricsTieBreakers>
 </document>

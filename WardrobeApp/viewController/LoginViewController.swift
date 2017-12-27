@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         handleTextFields()
+        passwordTextField.isSecureTextEntry = true
         signInButton.isEnabled = false
         signInButton.tintColor = .lightGray
     }
