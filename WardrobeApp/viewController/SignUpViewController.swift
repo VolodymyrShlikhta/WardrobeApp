@@ -26,6 +26,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         handleTextFields()
+        passwordTextField.isSecureTextEntry = true
         signUpButton.setTitleColor(UIColor.lightText, for: UIControlState.disabled)
         configureImageView()
         configureSignUpButton()
