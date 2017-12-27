@@ -107,6 +107,7 @@ extension SignInViewController: FBSDKLoginButtonDelegate {
         SwiftSpinner.show("Logging in...")
         let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         Auth.auth().signIn(with: credential) { (user, error) in
+            SwiftSpinner.hide()
             if let err = error {
                SwiftSpinner.show(duration: 3.0, title: "Failed to create a Firebase User with FaceBook account: \(err.localizedDescription)", animated: true)
                 return

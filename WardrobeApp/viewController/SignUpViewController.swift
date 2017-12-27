@@ -79,6 +79,7 @@ class SignUpViewController: UIViewController {
         SwiftSpinner.show("Waiting...")
         if let profileImage = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImage, 0.1) {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                SwiftSpinner.hide()
                 if error != nil{
                     SwiftSpinner.show(duration: 3.0, title: "\(error?.localizedDescription ?? "" )", animated: true)
                     return

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 import FirebaseAuth
-import SVProgressHUD
+import SwiftSpinner
 
 class ProfileViewController: UIViewController {
 
@@ -39,13 +39,13 @@ class ProfileViewController: UIViewController {
     private func loadData() {
         let realm = try! Realm()
         guard let userModel = realm.objects(UserModel.self).first else {
-            signOutButton.titleLabel?.text = "Create account"
+            signOutButton.setTitle("Create account", for: .normal)
             signOutButton.addTarget(self, action: #selector(transferToLogin), for: UIControlEvents.touchUpInside)
             return
         }
         self.userModel = userModel
         signOutButton.addTarget(self, action: #selector(signOut), for: UIControlEvents.touchUpInside)
-        signOutButton.titleLabel?.text = "Sign Out"
+        signOutButton.setTitle("Sign Out", for: .normal)
         setupExistingUser()
     }
     
@@ -63,17 +63,16 @@ class ProfileViewController: UIViewController {
     @objc func signOut() {
         do {
             try Auth.auth().signOut()
-            
-            
         } catch let signOutError as NSError {
-            SVProgressHUD.showError(withStatus: signOutError.localizedDescription)
-            UserDefaults.standard.set(false, forKey: "isLogin")
-            let realm = try! Realm()
-            try! realm.write {
-                realm.deleteAll()
-            }
-            performSegue(withIdentifier: "signInProfileSegue", sender: self)
+            SwiftSpinner.show(duration: 3.0, title: signOutError.localizedDescription, animated: true)
+            return;
         }
+        UserDefaults.standard.set(false, forKey: "isLogin")
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+        performSegue(withIdentifier: "signInProfileSegue", sender: self)
     }
     
 }

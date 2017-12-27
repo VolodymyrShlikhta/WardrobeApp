@@ -34,7 +34,6 @@
 		BA8423321FF2F47400E555ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA8423311FF2F47400E555ED /* GoogleService-Info.plist */; };
 		BA8423341FF2F9A600E555ED /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8423331FF2F9A600E555ED /* SignUpViewController.swift */; };
 		BA8423361FF310E200E555ED /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8423351FF310E200E555ED /* SignInViewController.swift */; };
-		BA8423381FF31D4000E555ED /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8423371FF31D4000E555ED /* Utilities.swift */; };
 		BAABCBEA1FF336E200CE572B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABCBE91FF336E200CE572B /* LoginViewController.swift */; };
 		BF310F981FE9B04B00F9B52C /* WDCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF310F971FE9B04B00F9B52C /* WDCalendarManager.swift */; };
 		BF310F9A1FE9B2CD00F9B52C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF310F991FE9B2CD00F9B52C /* ProfileViewController.swift */; };
@@ -103,7 +102,6 @@
 		BA8423311FF2F47400E555ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA8423331FF2F9A600E555ED /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BA8423351FF310E200E555ED /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		BA8423371FF31D4000E555ED /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BAABCBE91FF336E200CE572B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF310F971FE9B04B00F9B52C /* WDCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDCalendarManager.swift; sourceTree = "<group>"; };
 		BF310F991FE9B2CD00F9B52C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 			children = (
 				BF9AE98C1FF31F7D00E09345 /* WardrobeApp.entitlements */,
 				BA08989B1FCC7154000B6383 /* AppDelegate.swift */,
-				BA8423371FF31D4000E555ED /* Utilities.swift */,
 				B826F4C21FDEE45C0035F1D1 /* Fonts */,
 				B826F4A11FDEDFE10035F1D1 /* Common */,
 				B826F4B11FDEE0C00035F1D1 /* Model */,
@@ -447,7 +444,6 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -462,7 +458,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -522,7 +517,6 @@
 				BA8423361FF310E200E555ED /* SignInViewController.swift in Sources */,
 				BA08989C1FCC7154000B6383 /* AppDelegate.swift in Sources */,
 				BF310F981FE9B04B00F9B52C /* WDCalendarManager.swift in Sources */,
-				BA8423381FF31D4000E555ED /* Utilities.swift in Sources */,
 				BAABCBEA1FF336E200CE572B /* LoginViewController.swift in Sources */,
 				B826F4A01FDEDFC90035F1D1 /* ForecastDateTime.swift in Sources */,
 			);
